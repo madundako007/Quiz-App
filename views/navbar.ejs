@@ -1,0 +1,84 @@
+<html>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+
+        background-color: #cccccc;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .homepage {
+        padding: 0;
+        width: 10;
+        text-decoration: none;
+        font-size: 15px;
+        color: white;
+        text-transform: uppercase;
+        border-radius: 0 5px 5px 0;
+        overflow: hidden;
+        position: inherit;
+        -webkit-text-emphasis: triangle;
+        background-color: #e9e9e9;
+        -webkit-appearance: button-bevel;
+        -webkit-appearance: slider-horizontal;
+        margin: initial;
+        position: absolute;
+        max-width: 1000px;
+        margin: 0 auto;
+
+    }
+
+    .homepage a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .homepage a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .homepage a.active {
+        background-color: #2196F3;
+        color: white;
+    }
+
+
+    @media screen and (max-width: 600px) {}
+
+    .homepage a,
+    .homepage input[type=text] {
+        display: block;
+        text-align: center;
+        float: left;
+        margin: 0px 0px 0 0px;
+        padding: 14px;
+        position: relative;
+    }
+</style>
+
+<body>
+    <form class="navbar" method="POST" action="/logout">
+        <div>
+            <div class="homepage">
+                <a class="active" href="homepage">Homepage</a>
+                <a class="logout" href="/logout">Logout</a>
+                <a class="green" href="getResult">View Result</a>
+
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

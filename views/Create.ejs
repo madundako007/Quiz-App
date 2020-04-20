@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Test</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<style>
+  h1 {
+    margin: auto;
+    font-size: 38px;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times;
+    font-weight: 600;
+    line-height: 2;
+    width: 180;
+   
+    display: block;
+    font-size: 44px;
+    text-align: center;
+    color: teal;
+    font-style: oblique;
+    -webkit-text-emphasis-style: triangle;
+  }
+
+  body {
+    background-color: wheat;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+    background-color: ghostwhite;
+  }
+
+  .button {
+    padding: 10px 21px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: steelblue;
+    border: none;
+    border-radius: 46px;
+    box-shadow: 0 9px #999
+  }
+
+  .button:hover {
+    background-color: #3e8e41
+  }
+
+  .button:active {
+    border-radius: 50%;
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+</style>
+
+<body>
+
+    <% include navbar %> 
+    
+ 
+  <h1> Start Quiz </h1>
+  <div class="container">
+    <p>
+      <form class="questions" method="post" action="/compute_result">
+        <% for (let i = 0; i < result.length; i++) { %>
+        Q<%= i + 1 %>) <%= result[i].question %> <br>
+
+        <ul>
+          <label> <input name="<%= result[i]._id %>" type="radio" value="option1" /> <%= result[i].option1 %> <br>
+          </label>
+          <label> <input name="<%= result[i]._id %>" type="radio" value="option2" /> <%= result[i].option2 %> <br>
+          </label>
+          <label> <input name="<%= result[i]._id %>" type="radio" value="option3" /> <%= result[i].option3 %> <br>
+          </label>
+          <label> <input name="<%= result[i]._id %>" type="radio" value="option4" /> <%= result[i].option4 %> <br>
+          </label>
+        </ul>
+
+        <% } %>
+
+        <input type="hidden" name="email" value="<%= email %>"  />
+        <div>
+
+          <input type="submit" class="button" />
+
+        </div>
+      </form>
+    </p>
+</body>
+
+</html>

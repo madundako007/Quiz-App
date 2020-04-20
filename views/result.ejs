@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Test</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<style>
+  h1 {
+    font-size: 40px;
+    border: 0;
+    margin: 0;
+    color: green;
+  }
+
+  body {
+    background-color: wheat;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .signupbottom {
+    margin-top: 70px;
+    text-align: center;
+  }
+
+  .signupbutton {
+    width: 43%;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .signupbutton:hover {
+    width: 43%;
+    background-color: chartreuse;
+    border: indigo;
+    color: white;
+    padding: 18px 7px;
+    text-align: center;
+    text-decoration: double;
+    font-size: 19px;
+  }
+
+  .signout {
+    width: 18%;
+    background-color: unset;
+    border: darkmagenta;
+    cursor: pointer;
+    color: gray;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: blink;
+    display: inline-block;
+    font-size: 21px;
+
+
+
+  }
+
+  .signout:hover {
+    width: 15%;
+    background-color: black;
+    border: indigo;
+    color: white;
+    padding: 18px 7px;
+    text-align: center;
+    text-decoration: double;
+    font-size: 19px;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    border-radius: 50%;
+
+  }
+
+  .signout {
+    margin-top: 25px;
+    text-align: center;
+  }
+</style>
+
+<body>
+    <% include navbar %> 
+  <h1> <%= email %> </h1>
+  <div class="container">
+
+
+    <p> !!! This is your total !!!</p>
+    <b> You scored <br> <%= correctAnswer %> </b> Out of
+    <b> <%= count %>
+  </div>
+
+  <div class="signupbottom">
+    <button> <a href="/getResult"> Click here to view all questions records </a> </button>
+  </div>
+  
+  <div>
+  <form class="signout" method="POST" action="/logout">
+    <button type="submit"> Sign Out </button>
+    
+  </form>
+</div>
+</body>
+
+</html>

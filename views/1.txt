@@ -1,0 +1,23 @@
+/*
+
+//create quiz app
+//crete signup page, register page, result page
+
+//create a new user in database
+
+//create a homepage
+// create a form within view using ejs
+// register form/ logn form/ result form .ejs
+
+//create route that process form post / get reqest
+//collect info from input and insert to database
+//validate input 
+//hash password using bcrypt / compare it 
+//store user in database
+
+
+//login user with session 
+
+//create log out page 
+
+*/
